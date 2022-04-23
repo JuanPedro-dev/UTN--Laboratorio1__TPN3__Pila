@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1490112217 source:g:\otros ordenadores\mi portátil\carpeta drive\utn\1º cuatrimestre\programacion\4. unidad 4 - modularización\14. tpn 4 - funciones (con pila)\librerias (original)\pila.c
+	"pila.h"
+
+1490112217 g:\otros ordenadores\mi portátil\carpeta drive\utn\1º cuatrimestre\programacion\4. unidad 4 - modularización\14. tpn 4 - funciones (con pila)\librerias (original)\pila.h
+	<stdio.h>
+	<malloc.h>
+
+1649856547 source:g:\otros ordenadores\mi portátil\carpeta drive\utn\1º cuatrimestre\programacion\4. unidad 4 - modularización\14. tpn 4 - funciones (con pila)\librerias\pila.c
+	"pila.h"
+
+1490112217 g:\otros ordenadores\mi portátil\carpeta drive\utn\1º cuatrimestre\programacion\4. unidad 4 - modularización\14. tpn 4 - funciones (con pila)\librerias\pila.h
+	<stdio.h>
+	<malloc.h>
+
+1649856547 source:c:\users\equipo\desktop\carpeta drive\utn\1º cuatrimestre\programacion\4. unidad 4 - modularización\14. tpn 4 - funciones (con pila)\librerias\pila.c
+	"pila.h"
+
+1490112217 c:\users\equipo\desktop\carpeta drive\utn\1º cuatrimestre\programacion\4. unidad 4 - modularización\14. tpn 4 - funciones (con pila)\librerias\pila.h
+	<stdio.h>
+	<malloc.h>
+
+1649873971 source:c:\users\equipo\desktop\carpeta drive\utn\1º cuatrimestre\programacion\4. unidad 4 - modularización\14. tpn 4 - funciones (con pila)\tpn3 - funciones y pilas\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<locale.h>
+	"../Librerias/pila.h"
+
+1650657733 source:g:\otros ordenadores\mi portátil\carpeta drive\utn\1º cuatrimestre\programacion\4. unidad 4 - modularización\14. tpn 4 - funciones (con pila)\tpn3 - funciones y pilas\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<locale.h>
+	"../Librerias/pila.h"
+	<math.h>
+
