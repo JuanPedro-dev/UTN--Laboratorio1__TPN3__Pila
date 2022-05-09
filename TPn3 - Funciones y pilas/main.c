@@ -176,7 +176,17 @@ void insertarElementoEnPila(Pila * origen, const int elemento)
 /** 7. Hacer una función que pase los elementos de una pila a otra, de manera que se genere una nueva pila
 ordenada. Usar la función del ejercicio 6.  (Ordenamiento por inserción)*/
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+void ordenarInsercion(Pila * pilaInput, Pila * pilaOutput)
+{
+    if(!pilavacia(pilaInput))
+    {
+        apilar(pilaOutput, desapilar(pilaInput));
+    }
+    while(!pilavacia(pilaInput))
+    {
+        insertarElementoEnPila(pilaOutput, desapilar(pilaInput));
+    }
+}
 
 /** 8. Hacer una función que sume y retorne los dos primeros elementos de una pila (tope y anterior), sin alterar su contenido. */
 
@@ -291,7 +301,7 @@ void menu()
     Sleep(50);
     printf("//      int opción E = 'Pasar y ordenar a una pila (Ordenamiento por selección)';                             //\n");
     Sleep(50);
-    printf("//      int opción F = 'Insertar en una pila ordenada un nuevo elemento, conservando su orden.';             //\n");
+    printf("//      int opción F = 'Insertar en una pila ordenada un nuevo elemento, conservando su orden.';              //\n");
     Sleep(50);
     printf("//      int opción G = 'Pasar y ordenar a una pila (Ordenamiento por Inserción)';                             //\n");
     Sleep(50);
@@ -331,25 +341,6 @@ int main()
     system("color 3e");
     srand(time(NULL));
     char option;
-
-    Pila origen1;
-    inicpila(&origen1);
-    Pila destino1;
-    inicpila(&destino1);
-
-
-
-
-//    nCargaSPila(&origen,4);
-//////    trasladarAPila(&origen, &destino);
-////    printf("el minimo es: %i\n", minimo(&origen));
-////    printf("el menor eliminado fue: %d\n", eliminarMenor(&origen));
-//
-//    verPila(origen);
-//    verPila(destino);
-////    mostrar(&hola);
-//
-
 
     do
     {
@@ -396,7 +387,7 @@ int main()
                 printf("\n    Pila origen. \n\n   ");
                 verPila(origen);
                 printf("\n    Pila destino. \n\n   ");
-                verPila(destino);                printf("\n\n    Volver al menu: v , Salir del programa: 's',  Repetir opción A: otra tecla. ") ;
+                verPila(destino);                printf("\n\n    Volver al menu: v , Salir del programa: 's',  Repetir opción B: otra tecla. ") ;
                 fflush(stdin);
                 scanf("%c", &option);
             }while(option !='v' && option !='V' && option !='s' && option !='S');
@@ -419,7 +410,7 @@ int main()
                 printf("\n    Pila origen. \n\n   ");
                 verPila(origen);
                 printf("\n    Pila destino. \n\n   ");
-                verPila(destino);                printf("\n\n    Volver al menu: v , Salir del programa: 's',  Repetir opción A: otra tecla. ") ;
+                verPila(destino);                printf("\n\n    Volver al menu: v , Salir del programa: 's',  Repetir opción C: otra tecla. ") ;
                 fflush(stdin);
                 scanf("%c", &option);
             }while(option !='v' && option !='V' && option !='s' && option !='S');
@@ -439,7 +430,7 @@ int main()
                 printf(">> El elemento eliminado fue: %i",eliminarMenor(&origen));
                 printf("\n    Pila origen. \n\n   ");
                 verPila(origen);
-                printf("\n\n    Volver al menu: v , Salir del programa: 's',  Repetir opción A: otra tecla. ") ;
+                printf("\n\n    Volver al menu: v , Salir del programa: 's',  Repetir opción D: otra tecla. ") ;
                 fflush(stdin);
                 scanf("%c", &option);
             }while(option !='v' && option !='V' && option !='s' && option !='S');
@@ -465,7 +456,7 @@ int main()
                 verPila(origen);
                 printf("\n    Pila destino. \n\n   ");
                 verPila(destino);
-                printf("\n\n    Volver al menu: v , Salir del programa: 's',  Repetir opción A: otra tecla. ") ;
+                printf("\n\n    Volver al menu: v , Salir del programa: 's',  Repetir opción E: otra tecla. ") ;
                 fflush(stdin);
                 scanf("%c", &option);
             }while(option !='v' && option !='V' && option !='s' && option !='S');
@@ -496,7 +487,7 @@ int main()
 
                 printf("\n    Pila origen (con el elemento nuevo). \n\n   ");
                 verPila(origen);
-                printf("\n\n    Volver al menu: v , Salir del programa: 's',  Repetir opción A: otra tecla. ") ;
+                printf("\n\n    Volver al menu: v , Salir del programa: 's',  Repetir opción F: otra tecla. ") ;
                 fflush(stdin);
                 scanf("%c", &option);
             }while(option !='v' && option !='V' && option !='s' && option !='S');
@@ -508,12 +499,10 @@ int main()
                 system("cls");
                 Pila origen;
                 inicpila(&origen);
-                Pila auxiliar;
-                inicpila(&auxiliar);
+                Pila destino;
+                inicpila(&destino);
 
                 pilaRandom(&origen, 5);
-                ordenarSeleccion(&origen, &auxiliar);
-                pasarPila(&auxiliar, &origen);
 
                 int numeroRandom = rand() % 100;
 
@@ -521,11 +510,14 @@ int main()
                 printf("\n    Usando la siguiente pila origen generada (random): \n\n   ");
                 verPila(origen);
                 printf("\n    Veamos los resultados de la función falta hacer: \n\n   ");
-///////////////////////////////////////////////////////////         HACERRRRRR /////////////////////////////////////////////////////////////////////
+                ordenarInsercion(&origen, &destino );
 
-                printf("\n    Pila origen ordenada. \n\n   ");
+                printf("\n    Pila destino ordenada. \n\n   ");
+                verPila(destino);
+                printf("\n    Pila origen vacia. \n\n   ");
                 verPila(origen);
-                printf("\n\n    Volver al menu: v , Salir del programa: 's',  Repetir opción A: otra tecla. ") ;
+
+                printf("\n\n    Volver al menu: v , Salir del programa: 's',  Repetir opción G: otra tecla. ") ;
                 fflush(stdin);
                 scanf("%c", &option);
             }while(option !='v' && option !='V' && option !='s' && option !='S');
@@ -545,7 +537,7 @@ int main()
                 printf("\n    Veamos los resultados de la función: \n\n   ");
 
                 printf("\n    >> La suma de los ultimos 2 valores es: %d. \n\n   ", sumarUltimoConAnterior(origen));
-                printf("\n\n    Volver al menu: v , Salir del programa: 's',  Repetir opción A: otra tecla. ") ;
+                printf("\n\n    Volver al menu: v , Salir del programa: 's',  Repetir opción H: otra tecla. ") ;
                 fflush(stdin);
                 scanf("%c", &option);
             }while(option !='v' && option !='V' && option !='s' && option !='S');
@@ -565,7 +557,7 @@ int main()
                 printf("\n    Veamos los resultados de la función: \n\n   ");
 
                 printf("\n    >> El promedio de la pila es: %.2f. \n\n   ", promedioElementosPila(origen));
-                printf("\n\n    Volver al menu: v , Salir del programa: 's',  Repetir opción A: otra tecla. ") ;
+                printf("\n\n    Volver al menu: v , Salir del programa: 's',  Repetir opción I: otra tecla. ") ;
                 fflush(stdin);
                 scanf("%c", &option);
             }while(option !='v' && option !='V' && option !='s' && option !='S');
@@ -585,7 +577,7 @@ int main()
                 printf("\n    Veamos los resultados de la función: \n\n   ");
 
                 printf("\n    >> El número generado de la concatenación es: %d. \n\n   ",generarNumero(origen));
-                printf("\n\n    Volver al menu: v , Salir del programa: 's',  Repetir opción A: otra tecla. ") ;
+                printf("\n\n    Volver al menu: v , Salir del programa: 's',  Repetir opción J: otra tecla. ") ;
                 fflush(stdin);
                 scanf("%c", &option);
             }while(option !='v' && option !='V' && option !='s' && option !='S');
@@ -593,6 +585,8 @@ int main()
 
     }
     }while(option!='s' && option!='S');
-    printf("\n\n                Fin del programa\n");
+    printf("\n\n 'Si la depuración es el proceso de eliminar errores, entonces la programación debe ser el proceso de introducirlos.' \n    -- Edsger W. Dijkstra\n");
+
+    system("pause");
     return 0;
 }

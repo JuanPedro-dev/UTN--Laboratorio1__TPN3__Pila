@@ -35,3 +35,33 @@
 	"../Librerias/pila.h"
 	<math.h>
 
+1649856547 source:c:\users\equipo\desktop\carpeta drive\utn\1º cuatrimestre\programacion\practica 1 examen\tpn 3b - funciones (con pila)\librerias\pila.c
+	"pila.h"
+
+1490112217 c:\users\equipo\desktop\carpeta drive\utn\1º cuatrimestre\programacion\practica 1 examen\tpn 3b - funciones (con pila)\librerias\pila.h
+	<stdio.h>
+	<malloc.h>
+
+1650657670 source:c:\users\equipo\desktop\carpeta drive\utn\1º cuatrimestre\programacion\practica 1 examen\tpn 3b - funciones (con pila)\tpn3 - funciones y pilas\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<locale.h>
+	"../Librerias/pila.h"
+	<math.h>
+
+1649856547 source:g:\otros ordenadores\mi portátil\carpeta drive\utn\1º cuatrimestre\programacion\practica 1 examen\tpn 3b - funciones (con pila)\librerias\pila.c
+	"pila.h"
+
+1490112217 g:\otros ordenadores\mi portátil\carpeta drive\utn\1º cuatrimestre\programacion\practica 1 examen\tpn 3b - funciones (con pila)\librerias\pila.h
+	<stdio.h>
+	<malloc.h>
+
+1652121841 source:g:\otros ordenadores\mi portátil\carpeta drive\utn\1º cuatrimestre\programacion\practica 1 examen\tpn 3b - funciones (con pila)\tpn3 - funciones y pilas\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<locale.h>
+	"../Librerias/pila.h"
+	<math.h>
+
