@@ -178,13 +178,35 @@ ordenada. Usar la función del ejercicio 6.  (Ordenamiento por inserción)*/
 
 void ordenarInsercion(Pila * pilaInput, Pila * pilaOutput)
 {
+    Pila outputAux;
+    inicpila(&outputAux);
+    //Paso el primer valor a salida si es que la entrada tiene algo.
     if(!pilavacia(pilaInput))
     {
         apilar(pilaOutput, desapilar(pilaInput));
     }
+
+    // Voy a insertar el nuevo elemento en el lugar que corresponde.
     while(!pilavacia(pilaInput))
     {
-        insertarElementoEnPila(pilaOutput, desapilar(pilaInput));
+        int flag = 0;
+        while(!pilavacia(pilaOutput) && flag == 0)
+        {
+            if(tope(pilaOutput)< tope(pilaInput))
+            {
+                apilar(pilaOutput, desapilar(pilaInput));
+                flag = 1; // si ya lo inserte reinicio corto la comparación
+            } else
+            {
+                apilar(&outputAux, desapilar(pilaOutput));
+            }
+        }
+
+        // Reamor la pila salida
+        while(!pilavacia(&outputAux))
+        {
+            apilar(pilaOutput, desapilar(&outputAux));
+        }
     }
 }
 
@@ -509,7 +531,6 @@ int main()
                 printf("\n                    opción G = 'Pasar y ordenar a una pila (Ordenamiento por Inserción)'\n\n") ;
                 printf("\n    Usando la siguiente pila origen generada (random): \n\n   ");
                 verPila(origen);
-                printf("\n    Veamos los resultados de la función falta hacer: \n\n   ");
                 ordenarInsercion(&origen, &destino );
 
                 printf("\n    Pila destino ordenada. \n\n   ");

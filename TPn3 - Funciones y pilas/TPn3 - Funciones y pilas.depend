@@ -65,3 +65,18 @@
 	"../Librerias/pila.h"
 	<math.h>
 
+1649856547 source:c:\users\equipo\desktop\carpeta drive\utn\1º cuatrimestre\programacion\practica 1 examen\tpn 3b - funciones (con pila) terminado\librerias\pila.c
+	"pila.h"
+
+1490112217 c:\users\equipo\desktop\carpeta drive\utn\1º cuatrimestre\programacion\practica 1 examen\tpn 3b - funciones (con pila) terminado\librerias\pila.h
+	<stdio.h>
+	<malloc.h>
+
+1652715059 source:c:\users\equipo\desktop\carpeta drive\utn\1º cuatrimestre\programacion\practica 1 examen\tpn 3b - funciones (con pila) terminado\tpn3 - funciones y pilas\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<locale.h>
+	"../Librerias/pila.h"
+	<math.h>
+
